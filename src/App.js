@@ -1,18 +1,25 @@
 import './App.css';
+import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import AuthPage from './Pages/Auth';
-import EventsPage from './Pages/Events';
-import BookingsPage from './Pages/Bookings';
+import AuthPage from './pages/Auth';
+import EventsPage from './pages/Events';
+import BookingsPage from './pages/Bookings';
+import MainNavigation from './components/Navigation/MainNavigation';
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Redirect from='/' to='/auth' exact />
-        <Route path='/auth' component={AuthPage} />
-        <Route path='/events' component={EventsPage} />
-        <Route path='/bookings' component={BookingsPage} />
-      </Switch>
+      <React.Fragment>
+      <MainNavigation />
+      <main className="main-content">
+        <Switch>
+          <Redirect from='/' to='/auth' exact />
+          <Route path='/auth' component={AuthPage} />
+          <Route path='/events' component={EventsPage} />
+          <Route path='/bookings' component={BookingsPage} />
+        </Switch>
+      </main>
+      </React.Fragment>
     </BrowserRouter>
   );
 }
