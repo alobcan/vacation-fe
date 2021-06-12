@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Auth.css";
+import "./auth.css";
 import AuthContext from "../context/auth-context";
 
 class AuthPage extends React.Component {
