@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Modal from "../components/modal/modal";
-import Backdrop from "../components/backdrop/backdrop";
-import "./events.css";
+import Modal from '../components/modal/modal';
+import Backdrop from '../components/backdrop/backdrop';
+import './events.css';
 
 class EventsPage extends React.Component {
   state = {
@@ -27,18 +27,17 @@ class EventsPage extends React.Component {
         {this.state.creating && <Backdrop />}
         {this.state.creating && (
           <Modal
-            title="Add Event"
+            title='Add Event'
             canCancel
             canConfirm
             onCancel={this.modalCancelHandler}
-            onConfirm ={this.modalConfirmHandler}
-          >
+            onConfirm={this.modalConfirmHandler}>
             <p>Modal Content</p>
           </Modal>
         )}
-        <div className="events-control">
+        <div className='events-control'>
           <p>Share your own events!</p>
-          <button className="btn" onClick={this.startCreatingHandler}>
+          <button className='btn' onClick={this.startCreatingHandler}>
             Create Event
           </button>
         </div>
