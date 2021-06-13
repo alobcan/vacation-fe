@@ -25,6 +25,7 @@
         "comma-dangle": 0,
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "space-before-function-paren": "off"
+        "space-before-function-paren": "off",
+        "quote-props": "off"
     }
 }
