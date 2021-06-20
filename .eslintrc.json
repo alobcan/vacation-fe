@@ -26,6 +26,7 @@
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "space-before-function-paren": "off",
-        "quote-props": "off"
+        "quote-props": "off",
+        "multiline-ternary": "off"
     }
 }
