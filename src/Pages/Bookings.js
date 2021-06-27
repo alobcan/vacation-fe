@@ -61,13 +61,16 @@ class BookingsPage extends React.Component {
   deleteBookingHandler = (bookingId) => {
     const requestBody = {
       query: `
-          mutation {
-            cancelBooking(bookingId: "${bookingId}") {
+          mutation cancelBook($id: ID!) {
+            cancelBooking(bookingId: $id) {
               _id
               title
             }
           }
         `,
+      variables: {
+        id: bookingId,
+      },
     };
 
     fetch('http://localhost:8000/graphql', {
